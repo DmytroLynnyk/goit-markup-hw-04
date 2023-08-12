@@ -242,6 +242,10 @@ header {
   background-color: var(--navyblue);
 }
 
+.footer .container {
+  display: flex;
+}
+
 .footer .logo {
   margin: 0 0 16px 0;
 }
@@ -255,9 +259,37 @@ header {
   width: 264px;
 }
 
+.footer-social {
+  color: var(--white);
+  margin: 0 0 0 120px;
+}
+.footer-links {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-social .body-medium {
+  padding: 24px 0 0 0;
+  margin: 0 0 16px 0;
+}
+
+.footer-icon {
+  fill: var(--cloud);
+}
+
 /* Studio */
-.hero {
+.hero .container {
   background-color: var(--navyblue);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/bg-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
   color: var(--white);
   padding: 188px 0;
   text-align: center;
@@ -291,6 +323,28 @@ header {
 
 .feature-item {
   flex-basis: calc((100% - 72px) / 4);
+}
+
+.feature-icon-wrapper {
+  width: 264px;
+  height: 112px;
+  border-radius: 4px;
+  background: var(--cloud);
+  margin: 0 0 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.features-icon {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* width: 264px;
+  height: 112px;
+  border-radius: 4px;
+  background: var(--cloud);
+  margin: 0 0 8px 0; */
 }
 
 .feature-name {
@@ -356,6 +410,60 @@ header {
 
 .team-desc {
   color: var(--slate);
+  margin: 0 0 8px 0;
+}
+
+.team-card-links {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.link-wrapper {
+  background-color: var(--iris);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-link {
+  fill: white;
+}
+
+/* Section 5 */
+.customers {
+  background: #fff;
+  padding: 120px 0;
+}
+
+.customers-title {
+  text-align: center;
+  margin: 0 0 72px 0;
+}
+
+.customers-list {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.customers-logo-icon {
+  justify-content: center;
+  align-items: center;
+}
+
+.client {
+  width: 168px;
+  height: 88px;
+  border-radius: 4px;
+  border: 1px solid var(--lightslate);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Portfolio */
