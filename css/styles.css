@@ -32,8 +32,6 @@ img {
 button {
   border: none;
   cursor: pointer;
-  padding: 16px 32px;
-  border-radius: 4px;
 }
 
 /* Reset end */
@@ -103,13 +101,6 @@ button {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: var(--white);
-  background-color: var(--iris);
-  text-align: center;
-}
-.button-text:hover,
-.button-text:focus {
-  background-color: var(--ocean);
 }
 
 .link-text {
@@ -210,6 +201,7 @@ header {
   color: var(--navyblue);
   padding: 24px 0;
   display: block;
+  transition: color 400ms ease;
 }
 
 .nav-list-link::after {
@@ -236,7 +228,9 @@ header {
   font-style: normal;
   color: var(--slate);
   padding: 24px 0;
+  transition: color 400ms ease;
 }
+
 .contacts:hover,
 .contacts:focus {
   color: var(--ocean);
@@ -250,6 +244,7 @@ header {
 
 .contacts-link {
   color: var(--slate);
+  transition: color 400ms ease;
 }
 .contacts-link:hover,
 .contacts-link:focus {
@@ -291,6 +286,11 @@ header {
   gap: 16px;
 }
 
+.footer-links .link-wrapper:hover,
+.footer-links .link-wrapper:focus {
+  background-color: var(--green);
+}
+
 .footer-social .body-medium {
   padding: 24px 0 0 0;
   margin: 0 0 16px 0;
@@ -322,9 +322,19 @@ header {
 }
 
 .hero-button {
+  color: var(--white);
+  background-color: var(--iris);
+  text-align: center;
   min-width: 169px;
   display: block;
   margin: 0 auto;
+  padding: 16px 32px;
+  border-radius: 4px;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--ocean);
 }
 
 /* Section 2 */
@@ -385,7 +395,7 @@ header {
 }
 
 .wawd-titel {
-  color: var(--grey);
+  color: var(--navyblue);
   text-align: center;
   margin: 0 0 72px 0;
 }
@@ -403,7 +413,7 @@ header {
 
 .team-title {
   text-align: center;
-  color: var(--grey);
+  color: var(--navyblue);
   margin: 0 0 72px 0;
 }
 
@@ -449,10 +459,16 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 400ms ease;
 }
 
 .card-link {
   fill: white;
+}
+
+.team-list .link-wrapper:hover,
+.team-list .link-wrapper:focus {
+  background-color: var(--ocean);
 }
 
 /* Section 5 */
@@ -464,17 +480,13 @@ header {
 .customers-title {
   text-align: center;
   margin: 0 0 72px 0;
+  color: var(--navyblue);
 }
 
 .customers-list {
   display: inline-flex;
   align-items: flex-start;
   gap: 24px;
-}
-
-.customers-logo-icon {
-  justify-content: center;
-  align-items: center;
 }
 
 .client {
@@ -485,6 +497,19 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--lightslate);
+  transition: color 400ms ease;
+}
+
+.customers-logo-icon {
+  fill: currentColor;
+  justify-content: center;
+  align-items: center;
+}
+
+.client:hover,
+.client:focus {
+  color: var(--ocean);
 }
 
 /* Portfolio */
@@ -505,12 +530,15 @@ header {
   background-color: var(--cloud);
   padding: 12px 24px;
   border: 1px solid var(--cornflower);
+  border-radius: 4px;
+  transition: color 400ms ease, background-color 400ms ease;
 }
 
 .felter-item:hover,
 .felter-item:focus {
   color: var(--white);
   border: 1px solid transparent;
+  background-color: var(--ocean);
 }
 
 .portfolio-list {
@@ -523,6 +551,33 @@ header {
 .portf-item {
   flex-basis: calc((100% - 48px) / 3);
   color: var(--grey);
+}
+
+.portf-item:hover .overlay {
+  transform: translateY(0);
+}
+
+.portf-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+
+  transition: transform 400ms ease;
+
+  width: 100%;
+  height: 100%;
+  background-color: var(--iris);
+}
+
+.overlay-text {
+  color: var(--cloud);
+  padding: 40px 32px;
 }
 
 .portf-info {
@@ -538,4 +593,62 @@ header {
 
 .portf-desc {
   color: var(--slate);
+}
+
+/* Modal window */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--navyblue-modal, rgba(46, 47, 66, 0.4));
+
+  transition: opacity 300ms ease-out, visibility 300ms ease-out;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -66%);
+
+  width: 408px;
+  min-height: 584px;
+  border-radius: 4px;
+  background: var(--dairy, #fcfcfc);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+
+  transition: transform 300ms ease-in 300ms, opacity 300ms ease-in 300ms;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -86%);
+  opacity: 0;
+}
+
+.modal-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+.modal-btn-icon {
+  fill: var(--navyblue);
 }

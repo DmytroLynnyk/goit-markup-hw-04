@@ -26,7 +26,7 @@
       <header class="header">
         <div class="container">
           <nav class="header-nav">
-            <a class="logo link" href="./index.html"
+            <a class="logo" href="./index.html"
               >Web<span class="logo-studio-b">Studio</span></a
             >
             <ul class="nav-list body-medium">
@@ -65,7 +65,11 @@
             <h1 class="hero-title header-one">
               Effective Solutions for Your Business
             </h1>
-            <button class="hero-button button-text" type="button">
+            <button
+              class="hero-button button-text"
+              type="button"
+              data-modal-open
+            >
               Order Service
             </button>
           </div>
@@ -357,6 +361,17 @@
           </div>
         </div>
       </footer>
+      <!-- Modal window -->
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button class="modal-button" type="button" data-modal-close>
+            <svg class="modal-btn-icon" width="8" height="8">
+              <use href="./images/sprite.svg#modal-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
