@@ -571,20 +571,6 @@ header {
   margin: 0px 0 72px 0;
 }
 
-.filter {
-  /* transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); */
-}
-
-.filter-item {
-  /* transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); */
-}
-
 .filter-btn {
   color: var(--iris);
   background-color: var(--cloud);
@@ -604,10 +590,6 @@ header {
   border-color: transparent;
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
-  /* transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .portfolio-list {
@@ -735,6 +717,7 @@ header {
 
 .modal-button:hover,
 .modal-button:focus {
+  border: none;
   background-color: var(--ocean);
 }
 
