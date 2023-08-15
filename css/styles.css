@@ -669,7 +669,7 @@ header {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.is-hidden {
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -688,11 +688,6 @@ header {
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* .backdrop .is-hidden .modal-window {
-  transform: translate(-50%, -86%);
-  opacity: 0;
-} */
 
 .modal-button {
   display: flex;
