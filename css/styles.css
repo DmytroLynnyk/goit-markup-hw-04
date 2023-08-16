@@ -187,9 +187,12 @@ header {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-decoration: none;
+  display: inline-block;
+}
+
+.header .logo {
   padding: 24px 0;
   margin: 0 76px 0 0;
-  display: inline-block;
 }
 
 .logo-studio-b {
@@ -292,7 +295,6 @@ header {
 
 .footer-social {
   color: var(--white);
-  margin: 0 0 0 120px;
 }
 
 .footer-links {
@@ -308,7 +310,6 @@ header {
 }
 
 .footer-social .body-medium {
-  padding: 24px 0 0 0;
   margin: 0 0 16px 0;
 }
 
